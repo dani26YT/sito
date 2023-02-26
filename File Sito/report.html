@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/dani26.jpg">
+    <title>Segnala un Bug - Dani 26</title>
+</head>
+<body class="bg-scuro text-white">
+    <div x-data="{ open: false }">
+      <nav class="flex justify-between m-2 bg-chiaro p-2 rounded items-center">
+          <img class="h-16 w-16 object-cover rounded-full ml-5" src="img/Dani26.jpg" alt="LOGO">
+          <div id="link_nav" class="flex justify-between space-x-3 mr-8">
+              <a href="Settings.html">Reload</a>
+              <a href="index.html">Torna alla Home</a>
+          </div>
+          <svg @click="open = ! open" class="mr-5 cursor-pointer" id="menu_svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+      </nav>
+      <div id="hamburger_content" x-show="open" @click.outside="open = false" x-transition  @click="open = false" class="p-2 m-2 bg-chiaro rounded flex flex-col text-center space-y-2">
+              <a href="Settings.html">Reload</a>
+              <a href="index.html">Torna alla Home</a>
+      </div>
+  </div>
+  <div id="hero" class="h-[calc(100vh-10vh)] flex items-center justify-between">
+      <div data-aos="fade-right" id="text_hero" class="ml-10 space-y-4">
+        <h1 class="text-3xl">Ciao,</h1>
+        <h1 class="text-5xl text-gray-500">Benvenuto nella schermata per segnalare un bug.</h1>
+        <h1 class="text-5xl text-gray-500">Se c'è un bug, segnalalo!</h1>
+        <p></p>
+       <a href="#collegamento3" id="link_Documentazione"><button class="px-6 py-2 rounded bg-chiaro text-lg shadow-lg transition-all hover:tracking-widest hover:transition-all">Leggi di più</button></a>
+      </div>
+      <div id="img_hero" data-aos="fade-left">
+          <img src="" alt="" id="img/dani26.jpg" class="hidden xl:block">
+      </div>
+        <div class="p-2 bg-scuro rounded m-4 flex flex-col mb-4">
+            <a href="https://www.youtube.com/@dani26yt" target="_blank" ><img src="img/Dani26.jpg" alt="Dani 26" class="h-16 w-16 rounded-full mx-auto"></a>
+            <a href="https://www.youtube.com/@dani26yt" target="_blank" class="mx-auto mt-2">Visita Dani26</a>
+          </div>
+    </div>
+  </div>
+  <div id="collegamento2" class="mt-10"></div>
+  <div id="section2" class="mt-20">
+      <center>
+      <h1 class="m-5 text-2xl" data-aos="fade-up">I miei social</h1>
+    </center>
+    <div id="card_container" class="flex m-8 lg:space-x-8 xl:space-x-8 space-y-4">
+<p></p>
+        <div data-aos="fade-left" id="card" class="flex flex-col p-2 bg-chiaro rounded space-y-2 shadow-lg">
+            <a href="https://t.me/+pOaZoFgobRcyZDZk" target="_blank" class="flex justify-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
+                    <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
+                  </svg>
+                </a>
+                <h1 class="font-extrabold text-xl">Telegram</h1>
+                <p class="text-sm mb-2">Questo è il gruppo di report dei bug del sito web o dei miei profili.</p>
+        </div>
+        <div data-aos="fade-left" id="card" class="flex flex-col p-2 bg-chiaro rounded space-y-2 shadow-lg">
+          <a href="mail.html" target="_blank" class="flex justify-between">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"/>
+                  <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+              <h1 class="font-extrabold text-xl">Contattami via e-Mail</h1>
+              <p class="text-sm mb-2">Questo è l'e-mail del canale YT inviami il report dei bug</p>
+      </div>
+    </div>
+  </div>
+  <div id="collegamento3" class="mt-10"></div>
+  <div id="section3" class="mt-20">
+    <div id="text/img_about" class="flex items-center justify-between space-x-20">
+        <div data-aos="fade-up-right">
+        <div id="linea" class="p-1 bg-chiaro m-8 ml-16  mb-2 rounded-lg w-2/12"></div>
+        <h1 class="ml-16 text-2xl" id="documentazione">Documentazione</h1>
+        <p class="m-8 ml-16 xl:w-5/12" id="text_about">Ciao, per segnalare un bug scrivi un messaggio nel gruppo telegram reportato qui sopra. </p>
+        </div>  
+        <img data-aos="fade-up-down" src="" alt="Dani26"  class="rounded-lg shadow-lg  m-12 hidden xl:block">
+    </div>
+  </div>
+  <footer class="p-2 bg-chiaro mt-20">
+      <center>
+        <p>Sviluppato da <a href="Dani 26" class="font-bold underline" target="_blank"></a>Dani 26</p>
+        <p>© 2023 Tutti i diritti riservati a Dani 26</p>
+        <p>Programmato con Visual Studio Code</p>
+      </center>
+  </footer>
+</body>
+<script>
+    AOS.init();
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chiaro: '#B51818',
+            scuro: '#921111',
+          }
+        }
+      }
+    }
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/dani26.jpg">
+    <title>Settings - Dani 26</title>
+</head>
+<body class="bg-scuro text-white">
+    <div x-data="{ open: false }">
+      <nav class="flex justify-between m-2 bg-chiaro p-2 rounded items-center">
+          <img class="h-16 w-16 object-cover rounded-full ml-5" src="img/Dani26.jpg" alt="LOGO">
+          <div id="link_nav" class="flex justify-between space-x-3 mr-8">
+              <a href="Settings.html">Reload</a>
+              <a href="report.html">Segnala Un Bug</a>
+              <a href="themes.html">Cambia il Tema</a>
+              <a href="index.html">Torna alla Home</a>
+          </div>
+          <svg @click="open = ! open" class="mr-5 cursor-pointer" id="menu_svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+      </nav>
+      <div id="hamburger_content" x-show="open" @click.outside="open = false" x-transition  @click="open = false" class="p-2 m-2 bg-chiaro rounded flex flex-col text-center space-y-2">
+        <a href="Settings.html">Reload</a>
+        <a href="report.html">Segnala Un Bug</a>
+        <a href="themes.html">Cambia il Tema</a>
+        <a href="index.html">Torna alla Home</a>
+      </div>
+  </div>
+  <div id="hero" class="h-[calc(100vh-10vh)] flex items-center justify-between">
+      <div data-aos="fade-right" id="text_hero" class="ml-10 space-y-4">
+        <h1 class="text-3xl">Ciao,</h1>
+        <h1 class="text-5xl text-gray-500">Benvenuto nella schermata delle impostazioni</h1>
+        <h1 class="text-5xl text-gray-500"></h1>
+        <p></p>
+       <a href="login.html" id="link_Documentazione"><button class="px-6 py-2 rounded bg-chiaro text-lg shadow-lg transition-all hover:tracking-widest hover:transition-all">Accedi</button></a>
+      </div>
+      <div id="img_hero" data-aos="fade-left">
+          <img src="" alt="" id="img/dani26.jpg" class="hidden xl:block">
+      </div>
+        <div class="p-2 bg-scuro rounded m-4 flex flex-col mb-4">
+            <a href="https://www.youtube.com/@dani26yt" target="_blank" ><img src="img/Dani26.jpg" alt="Dani 26" class="h-16 w-16 rounded-full mx-auto"></a>
+            <a href="https://www.youtube.com/@dani26yt" target="_blank" class="mx-auto mt-2">Visita Dani26</a>
+          </div>
+          <div id="hero" class="h-[calc(100vh-10vh)] flex items-center justify-between">
+            <div data-aos="fade-right" id="text_hero" class="ml-10 space-y-4">
+              <h1 class="text-xl">Le impostazioni sono presto in arrivo,</h1>
+              <h1 class="text-m">Per ora sono disponibili solo nel canale dev(Developer)</h1>
+              <p></p>
+            </div>
+    </div>
+  </div>
+  <div id="collegamento2" class="mt-10"></div>
+  <div id="section2" class="mt-20">
+      <center>
+      <h1 class="m-5 text-2xl" data-aos="fade-up"></h1>
+    </center>
+    <div id="card_container" class="flex m-8 lg:space-x-8 xl:space-x-8 space-y-4">
+<p></p>
+  <div id="collegamento3" class="mt-10"></div>
+  <div id="section3" class="mt-20">
+    <div id="text/img_about" class="flex items-center justify-between space-x-20">
+        <div data-aos="fade-up-right">
+        <div id="linea" class="p-1 bg-chiaro m-8 ml-16  mb-2 rounded-lg w-2/12"></div>
+        <h1 class="ml-16 text-2xl" id="documentazione">Informazione di servizio</h1>
+        <p class="m-8 ml-16 xl:w-5/12" id="text_about">Ciao, le impostazioni arriveranno molto presto, ma per ora le impostazioni non sono disponibili. </p>
+        </div>  
+        <img data-aos="fade-up-left" src="" alt=""  class="rounded-lg shadow-lg  m-12 hidden xl:block">
+    </div>
+  </div>
+  <footer class="p-2 bg-chiaro mt-20">
+      <center>
+        <p>Sviluppato da <a href="Dani 26" class="font-bold underline" target="_blank"></a>Dani 26</p>
+        <p>© 2023 Tutti i diritti riservati a Dani 26</p>
+        <p>Programmato con Visual Studio Code</p>
+      </center>
+  </footer>
+</body>
+<script>
+    AOS.init();
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chiaro: '#B51818',
+            scuro: '#921111',
+          }
+        }
+      }
+    }
+</script>
+</html>
